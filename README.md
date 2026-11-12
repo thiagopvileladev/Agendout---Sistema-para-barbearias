@@ -1,20 +1,28 @@
-# Agendout - Sistema SaaS de Gestão e Agendamento para Barbearias
+# Agendout — Sistema SaaS de Gestão e Agendamento para Barbearias
 
-O Agendout é uma plataforma SaaS desenvolvida para facilitar a gestão de barbearias, oferecendo ferramentas para agendamento online, controle financeiro, gerenciamento de equipes e acompanhamento de resultados.
+O **Agendout** é uma plataforma SaaS desenvolvida para facilitar a gestão de barbearias, oferecendo ferramentas para agendamento online, controle financeiro, gerenciamento de equipes e acompanhamento de resultados.
 
-O sistema utiliza uma arquitetura multi-tenant, permitindo que diferentes estabelecimentos utilizem a mesma plataforma de forma independente, com personalização e isolamento de dados.
+O sistema utiliza uma arquitetura **Multi-Tenant**, permitindo que diferentes estabelecimentos utilizem a mesma plataforma de forma independente, com personalização e isolamento de dados.
 
 > **Nota sobre o código-fonte:** Este repositório funciona como uma vitrine técnica do projeto. Por se tratar de um sistema em produção, o código-fonte completo, as configurações de infraestrutura e determinadas regras de negócio permanecem em um repositório privado.
 
-**Acesse o sistema:**
-- Site: https://agendout.com.br
-- Página de agendamento para testes: https://agendout.com.br/barbearia
+## Demonstração
+
+Confira o sistema em funcionamento e explore suas interfaces:
+
+| Recurso | Acesso |
+| :--- | :--- |
+| **Site oficial** | [agendout.com.br](https://agendout.com.br) |
+| **Booking Page** | [Experimentar agendamento](https://agendout.com.br/barbearia) |
+| **Galeria de screenshots** | [Visualizar galeria completa](https://thiagopvileladev.github.io/agendout-portfolio/) |
 
 ---
 
 ## Telas do Sistema
 
 O frontend foi desenvolvido com foco em usabilidade, responsividade e facilidade de navegação, permitindo que os clientes realizem agendamentos diretamente pelo navegador, sem precisar instalar um aplicativo.
+
+As capturas de tela e demonstrações das interfaces estão disponíveis na [galeria visual do Agendout](https://thiagopvileladev.github.io/agendout-portfolio/).
 
 | Página de Agendamento | Painel Administrativo |
 | :---: | :---: |
@@ -27,6 +35,7 @@ O frontend foi desenvolvido com foco em usabilidade, responsividade e facilidade
 O projeto utiliza uma arquitetura baseada em uma aplicação frontend independente, integrada a uma API RESTful responsável pelas regras de negócio e persistência dos dados.
 
 ### Backend
+
 - **Java 17 e Spring Boot 3.2.4:** desenvolvimento da API e das regras de negócio.
 - **Spring Security e OAuth2:** autenticação e controle de acesso utilizando JWT.
 - **JPA e Hibernate 6:** persistência e gerenciamento dos dados.
@@ -35,12 +44,14 @@ O projeto utiliza uma arquitetura baseada em uma aplicação frontend independen
 - **Jsoup:** sanitização de conteúdo e prevenção contra ataques XSS.
 
 ### Frontend
+
 - **React e Vite:** construção da interface e gerenciamento da aplicação.
 - **Tailwind CSS:** estilização e implementação da identidade visual.
 - **Recharts:** apresentação de gráficos e indicadores financeiros.
 - **Framer Motion:** animações e transições da interface.
 
 ### Infraestrutura
+
 - **PostgreSQL:** banco de dados relacional.
 - **Supabase:** gerenciamento do banco de dados e armazenamento de arquivos.
 - **Supabase Storage:** armazenamento de imagens, logotipos e arquivos otimizados em WebP.
@@ -53,7 +64,7 @@ O projeto utiliza uma arquitetura baseada em uma aplicação frontend independen
 
 Um dos principais pontos do projeto é a implementação de uma arquitetura multi-tenant, que permite atender diferentes barbearias utilizando a mesma aplicação e estrutura de banco de dados.
 
-Foi utilizada a abordagem de Row-Level Tenancy (Discriminator Column), na qual os registros são associados a um identificador de tenant, garantindo a separação dos dados entre os estabelecimentos.
+Foi utilizada a abordagem de **Row-Level Tenancy (Discriminator Column)**, na qual os registros são associados a um identificador de tenant, garantindo a separação dos dados entre os estabelecimentos.
 
 ### Fluxo de requisições
 
@@ -105,6 +116,7 @@ Entre as principais implementações estão:
 Integração com a API do Asaas para gerenciamento das assinaturas da plataforma.
 
 O fluxo contempla:
+
 - Geração de cobranças via PIX.
 - Processamento de pagamentos por Webhooks.
 - Atualização automática do status das assinaturas.
@@ -116,6 +128,7 @@ O fluxo contempla:
 Sistema de agendamento que permite aos clientes visualizar os horários disponíveis e reservar serviços diretamente pela página do estabelecimento.
 
 A lógica considera:
+
 - Horários de funcionamento.
 - Disponibilidade individual dos profissionais.
 - Duração dos serviços.
@@ -126,6 +139,7 @@ A lógica considera:
 ### 3. Gestão Financeira
 
 Módulo administrativo para acompanhamento dos resultados do estabelecimento, incluindo:
+
 - Controle de receitas.
 - Acompanhamento financeiro.
 - Gerenciamento de comissões.
