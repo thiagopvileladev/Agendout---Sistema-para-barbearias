@@ -1,4 +1,4 @@
-# Agendout — Sistema SaaS de Gestão e Agendamento para Barbearias
+# Agendout - Sistema SaaS de Gestão e Agendamento para Barbearias
 
 O Agendout é uma plataforma SaaS desenvolvida para facilitar a gestão de barbearias, oferecendo ferramentas para agendamento online, controle financeiro, gerenciamento de equipes e acompanhamento de resultados.
 
